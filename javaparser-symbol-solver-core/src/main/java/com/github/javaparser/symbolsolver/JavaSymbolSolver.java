@@ -76,6 +76,11 @@ public class JavaSymbolSolver implements SymbolResolver {
         public ResolvedType getType() {
             return ResolvedPrimitiveType.INT;
         }
+
+        @Override
+        public boolean isArrayLength() {
+            return true;
+        }
     }
 
     private TypeSolver typeSolver;
