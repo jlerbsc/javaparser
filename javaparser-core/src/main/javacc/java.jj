@@ -3536,13 +3536,15 @@ NodeList<ComponentPatternExpr> PatternList():
 	NodeList<ComponentPatternExpr> ret = new NodeList<>();
 }
 {
-	"("
-    pattern = ComponentPatternExpression() { ret.add(pattern); }
-    (
-        ","
+    "("
+      [
         pattern = ComponentPatternExpression() { ret.add(pattern); }
-    )*
-	")"
+        (
+            ","
+            pattern = ComponentPatternExpression() { ret.add(pattern); }
+        )*
+      ]
+    ")"
     { return ret; }
 }
 
