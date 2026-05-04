@@ -274,8 +274,6 @@
 						<publishingServerId>central</publishingServerId>
 						<!-- Automatic publication after validation -->
 						<autoPublish>true</autoPublish>
-						<!-- Wait until the publication is effective -->
-						<waitUntil>published</waitUntil>
 						<!-- Readable name to identify the deployment -->
 						<deploymentName>${project.artifactId}-${project.version}</deploymentName>
 					</configuration>
